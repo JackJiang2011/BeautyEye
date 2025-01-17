@@ -58,6 +58,8 @@ public final static int JDK1_7 = 30;
 	
 	/** The Constant JDK1_9. */
 	public final static int JDK1_9 = 32;
+	/** JDK1_9以上版本 */
+	public final static int JDK1_9_OLDER = 99;
 
 	/** The current. */
 	private static JVM current;
@@ -137,8 +139,8 @@ public final static int JDK1_7 = 30;
 		} else if (p_JavaVersion.startsWith("1.0.")) {
 			jdkVersion = JDK1_0;
 		} else {
-			// unknown version, assume 1.3
-			jdkVersion = JDK1_3;
+			// unknown version, assume over 1.9
+			jdkVersion = JDK1_9_OLDER;
 		}
 	}
 
